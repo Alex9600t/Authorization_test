@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{Авторизация на Госуслугах}</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div>
+
+        <div class="wrapper">
+            <button id="show_registration">Регистрация / Авторизация</button>
+        </div>
+
+        <div class="authorization" id="authorization">
+            <div class="wrapper">
+                <p>Авторизация</p>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="username" id="username" placeholder="username" />
+            </div>
+
+            <div class="wrapper">
+                <input type="password" name="password" id="password" placeholder="password">
+                <input type="checkbox" name="passvisible" id="passvisible"
+                    onchange="document.querySelector('#password').type = this.checked ? 'text' : 'password' ">
+            </div>
+
+            <div class="wrapper">
+                <input type="submit" value="Зайти" id="submit">
+            </div>
+
+            <div class="wrapper">
+                <div id="result"></div>
+            </div>
+        </div>
+
+        <div class="registration" id="registration">
+            <div class="wrapper">
+                <p>Регистрация</p>
+            </div>
+            <div class="wrapper">
+                <input type="text" name="text" id="reg_username" placeholder="username" />
+            </div>
+
+            <div class="wrapper">
+                <input type="password" name="password" id="reg_password" placeholder="password">
+            </div>
+
+            <div class="wrapper">
+                <input type="password" name="password" id="reg_rep_password" placeholder="repeat password">
+            </div>
+
+            <div class="wrapper">
+                <input type="submit" value="Создать аккаунт" id="reg_submit">
+            </div>
+
+            <div class="wrapper">
+                <div id="reg_result"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./md5.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
